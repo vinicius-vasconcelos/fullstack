@@ -44,4 +44,4 @@ Suba seu **servidor de back** (ele roda na porta **3000**)
 npm start
 ```
 
-Execute o **script.sql** no seu terminal ou workbench
+Execute o **script.sql** no seu *terminal* ou *workbench*

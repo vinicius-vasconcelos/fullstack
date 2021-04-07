@@ -11,14 +11,14 @@ CREATE TABLE IF NOT EXISTS pokemons (
   PRIMARY KEY (id)
 );
 
-INSERT INTO pokemons (name, type) VALUES
-  ('Charmander', 'Fire'),
-  ('Charmeleon', 'Fire'),
-  ('Squirtle', 'Water'),
-  ('Wartotle', 'Water'),
-  ('Blastoise', 'Water'),
-  ('Caterpie', 'Bug'),
-  ('Metapod', 'Bug'),
-  ('Ekans', 'Poison'),
-  ('Arbok', 'Poison'),
-  ('Pikachu', 'Eletric');
+INSERT INTO pokemons (id, name, type) VALUES
+  ('4', 'Charmander', 'Fire'),
+  ('5', 'Charmeleon', 'Fire'),
+  ('7', 'Squirtle', 'Water'),
+  ('8', 'Wartotle', 'Water'),
+  ('9', 'Blastoise', 'Water'),
+  ('10', 'Caterpie', 'Bug'),
+  ('11', 'Metapod', 'Bug'),
+  ('23', 'Ekans', 'Poison'),
+  ('24', 'Arbok', 'Poison'),
+  ('25', 'Pikachu', 'Eletric');

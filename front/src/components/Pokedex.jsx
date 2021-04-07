@@ -10,14 +10,16 @@ class Pokedex extends React.Component {
 
   getPokemons() {
     //fazer fetch no lugar desse retorno aqui
-    return [
-      { id: 25, name: 'Pikachu', type: 'Electric' },
-      { id: 143, name: 'Snorlax', type: 'Normal' }
-    ]
+    const url = 'http://127.0.0.1:3001/pokemons';
+    fetch(url)
+      .then(resp => resp.json())
+      .then(data => {
+        this.setState({ pokemons: data.pokemons })
+      })
   }
 
   componentDidMount() {
-    this.setState({ pokemons: this.getPokemons() })
+    this.getPokemons();
   }
 
   render() {
@@ -26,7 +28,7 @@ class Pokedex extends React.Component {
       <div>
         <h1>Demonstração sobre Back-end</h1>
         <div>
-          {pokemons.map((pokemon) => <PokemonInfo pokeInfo={pokemon} />)}
+          {pokemons.map((pokemon) => <PokemonInfo key={pokemon.id} pokeInfo={pokemon} />)}
         </div>
       </div>
     )
